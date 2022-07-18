@@ -1,0 +1,13 @@
+
+{{ define "main" }}
+
+  {{ $sections := site.Data.sections }}
+
+  {{ if $sections }}
+    {{ range sort $sections "section.weight" }}
+      {{ if .section.enable }}
+        {{- partial .section.layout . -}}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

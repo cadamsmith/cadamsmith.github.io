@@ -1,0 +1,31 @@
+<header>
+  <a class="brand" href="/">
+    Adam Smith
+  </a>
+
+  <input type="checkbox" id="nav-mobile-toggle" class="nav-mobile-toggle">
+
+  <div class="nav-mobile">
+    <div class="hamburger-wrapper">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  </div>
+
+  {{ $sections := site.Data.sections }}
+
+  {{ if $sections }}
+    <nav>
+      <ul class="nav-items" id="navLinks">
+        {{ range sort $sections "section.weight" }}
+          {{ if and (.section.enable) (.section.showOnNavbar) }}
+            <li class="nav-item">
+              <a class="nav-item-link" href="#{{ .section.id }}">{{ .section.name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
+</header>

@@ -1,0 +1,9 @@
+{{ $sectionID := replace (lower .section.name) " " "-" }}
+{{ if .section.id }}
+  {{ $sectionID = .section.id }}
+{{ end }}
+
+<section id="{{ $sectionID }}">
+  <h1>Hi, I'm Adam Smith.</h1>
+  <h2>I'm a full-stack web developer.</h2>
+</section>

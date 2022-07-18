@@ -1,0 +1,7 @@
+[section]
+  name = "Projects"
+  id = "projects"
+  enable = true
+  weight = 4
+  showOnNavbar = true
+  layout = "sections/projects.html"

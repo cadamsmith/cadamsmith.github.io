@@ -1,0 +1,7 @@
+[section]
+  name = "Experience"
+  id = "experience"
+  enable = true
+  weight = 3
+  showOnNavbar = true
+  layout = "sections/experience.html"

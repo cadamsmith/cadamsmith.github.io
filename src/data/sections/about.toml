@@ -1,0 +1,7 @@
+[section]
+  name = "About"
+  id = "about"
+  enable = true
+  weight = 2
+  showOnNavbar = true
+  layout = "sections/about.html"
