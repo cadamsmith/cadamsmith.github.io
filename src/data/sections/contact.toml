@@ -1,7 +1,0 @@
-[section]
-  name = "Contact"
-  id = "contact"
-  enable = true
-  weight = 5
-  showOnNavbar = true
-  layout = "sections/contact.html"
