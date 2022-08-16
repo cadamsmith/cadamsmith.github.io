@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *   ,
+ * 1 | $file-border-color: $border !default
+ *   |                     ^^^^^^^
+ *   '
+ *   src/scss/bulma/sass/form/file.sass 1:21  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 1 \2502  $file-border-color: $border !default\a   \2502                      ^^^^^^^\a   \2575 \a   src/scss/bulma/sass/form/file.sass 1:21  root stylesheet";
+}
