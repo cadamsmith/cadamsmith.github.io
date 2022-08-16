@@ -1,0 +1,17 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 35 | /       +ltr
+ * 36 | \         margin-right: $icon-text-spacing
+ *    '
+ *   src/scss/bulma/sass/elements/icon.sass 35:7  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 35 \2502  \250c        +ltr\a 36 \2502  \2514          margin-right: $icon-text-spacing\a    \2575 \a   src/scss/bulma/sass/elements/icon.sass 35:7  root stylesheet";
+}

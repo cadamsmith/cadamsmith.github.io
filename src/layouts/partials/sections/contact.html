@@ -1,8 +1,0 @@
-{{ $sectionID := replace (lower .section.name) " " "-" }}
-{{ if .section.id }}
-  {{ $sectionID = .section.id }}
-{{ end }}
-
-<section id="{{ $sectionID }}">
-  <h3 class="anchor">{{ .section.name }}</h3>
-</section>

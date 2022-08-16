@@ -1,7 +1,0 @@
-[section]
-  name = "Welcome"
-  id = "welcome"
-  enable = true
-  weight = 1
-  showOnNavbar = false
-  layout = "sections/welcome.html"
