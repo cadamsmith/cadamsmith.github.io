@@ -4,12 +4,55 @@
 
 .terminal {
     background-color: $primary;
-    width: 450px;
-    height: 250px;
 }
 
-body {
-    color: $primary;
+html {
+    background-color: $primary !important;
+}
+
+nav.navbar {
+    background-color: white;
+}
+
+.navbar-brand {
+    margin-left: 0 !important;
+
+    .navbar-item {
+        padding-left: 0;
+    }
+}
+
+.navbar-brand-name {
+    padding: 0.25rem;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.section {
+    padding: 3rem 1.5rem !important;
+}
+
+nav {
+    padding: 0 1.5rem !important;
+}
+
+.container.is-fluid {
+    max-width: 1350px !important;
+}
+
+.has-background-1 {
+    background-color: $background-color1;
+}
+
+.has-background-2 {
+    background-color: $background-color2;
+}
+
+.navbar.is-spaced {
+    padding-top: $navbar-padding-vertical;
+    padding-bottom: $navbar-padding-vertical;
+    padding-left: $navbar-padding-horizontal;
+    padding-right: $navbar-padding-horizontal;
 }
 
 @import "../../node_modules/bulma/bulma.sass";
