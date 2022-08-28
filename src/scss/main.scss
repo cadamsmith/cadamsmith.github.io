@@ -8,10 +8,12 @@
 
 html {
     background-color: $primary !important;
+    scroll-behavior: smooth;
 }
 
 nav.navbar {
     background-color: white;
+    max-height: $navbar-height;
 }
 
 .navbar-brand {
@@ -53,6 +55,15 @@ nav {
     padding-bottom: $navbar-padding-vertical;
     padding-left: $navbar-padding-horizontal;
     padding-right: $navbar-padding-horizontal;
+}
+
+.nav-anchor {
+    position: absolute;
+    top: calc(-1 * $navbar-height);
+}
+
+.nav-section {
+    position: relative;
 }
 
 @import "../../node_modules/bulma/bulma.sass";
