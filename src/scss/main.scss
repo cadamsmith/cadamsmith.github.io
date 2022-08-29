@@ -81,6 +81,11 @@ nav {
   }
 }
 
+#auburnTabContents {
+  height: 100px;
+  overflow-y: scroll;
+}
+
 .tab-content {
   display: none;
 }
