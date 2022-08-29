@@ -34,10 +34,6 @@ nav {
   padding: 0 1.5rem !important;
 }
 
-.container.is-fluid {
-  max-width: 1350px !important;
-}
-
 .has-background-1 {
   background-color: $background-color1;
 }
@@ -94,3 +90,7 @@ nav {
 }
 
 @import "../../node_modules/bulma/bulma.sass";
+
+.container.is-fluid {
+  max-width: 1200px !important;
+}
