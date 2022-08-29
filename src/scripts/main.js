@@ -30,6 +30,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   configureTerminal();
+
+  const auburnTabs = Array.from(document.querySelectorAll('#auburnTabs .tab'));
+  auburnTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const isActive = tab.classList.contains('is-active');
+      if (!isActive) {
+        const tabContentID = tab.dataset.target;
+        if (!tabContentID) {
+          return;
+        }
+
+        deselectAllAuburnTabs();
+        tab.classList.add('is-active');
+
+        const tabContent = document.getElementById(tabContentID);
+        deselectAllAuburnTabContents();
+        tabContent.classList.add('is-active');
+      }
+    });
+  });
 });
 
 // setting up the terminal
@@ -231,4 +251,18 @@ function configureTerminal() {
   }
   
   runFakeTerminal();
+}
+
+function deselectAllAuburnTabs() {
+  const auburnTabs = Array.from(document.querySelectorAll('#auburnTabs .tab'));
+  auburnTabs.forEach((tab) => {
+    tab.classList.remove('is-active');
+  });
+}
+
+function deselectAllAuburnTabContents() {
+  const auburnTabContents = Array.from(document.querySelectorAll('#auburnTabContents .tab-content'));
+  auburnTabContents.forEach((tabContent) => {
+    tabContent.classList.remove('is-active');
+  });
 }

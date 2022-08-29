@@ -85,4 +85,12 @@ nav {
   }
 }
 
+.tab-content {
+  display: none;
+}
+
+.tab-content.is-active {
+  display: block;
+}
+
 @import "../../node_modules/bulma/bulma.sass";

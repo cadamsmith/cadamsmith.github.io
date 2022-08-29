@@ -35,7 +35,7 @@
           <h2 class="title is-3">About Me</h2>
 
           <p>I'm a <strong>fullstack software developer</strong> who builds <strong>data-driven</strong> and <strong>well-architected</strong> software solutions. Currently, I'm completing my last semester at
-            <strong>Auburn University</strong> and seeking a job opportunity for <strong>Spring 2023 onward</strong>.
+            <strong>Auburn University</strong> and seeking a job opportunity starting in <strong>Spring 2023</strong>.
           </p>
         </header>
         
@@ -65,24 +65,32 @@
                 </div>
 
                 <div class="box">
-                  <div class="tabs is-centered is-fullwidth">
+                  <div class="tabs is-centered is-fullwidth" id="auburnTabs">
                     <ul>
-                      <li class="is-active">
+                      <li class="tab is-active" data-target="degreeInfo">
                         <a>
-                          <span>Basic Info</span>
+                          <span>Degree Info</span>
                         </a>
                       </li>
-                      <li>
+                      <li class="tab" data-target="coursesTaken">
                         <a>
                           <span>Courses Taken</span>
                         </a>
                       </li>
                     </ul>
                   </div>
-  
-                  <p>Bachelor of Software Engineering</p>
-                  <p>Minor in Mathematics</p>
-                  <p>GPA: 4.04 / 4.00</p>
+
+                  <div class="tab-contents" id="auburnTabContents">
+                    <div class="tab-content is-active" id="degreeInfo">
+                      <p>Bachelor of Software Engineering</p>
+                      <p>Minor in Mathematics</p>
+                      <p>GPA: 4.04 / 4.00</p>
+                    </div>
+
+                    <div class="tab-content" id="coursesTaken">
+                      test
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
