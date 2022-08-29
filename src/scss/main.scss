@@ -2,68 +2,86 @@
 
 @import '_variables';
 
-.terminal {
-    background-color: $primary;
-}
-
 html {
-    background-color: $primary !important;
-    scroll-behavior: smooth;
+  background-color: $primary !important;
+  scroll-behavior: smooth;
 }
 
 nav.navbar {
-    background-color: white;
-    max-height: $navbar-height;
+  background-color: white;
+  max-height: $navbar-height;
 }
 
 .navbar-brand {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 
-    .navbar-item {
-        padding-left: 0;
-    }
+  .navbar-item {
+    padding-left: 0;
+  }
 }
 
 .navbar-brand-name {
-    padding: 0.25rem;
-    border: 2px solid black;
-    font-weight: bold;
+  padding: 0.25rem;
+  border: 2px solid black;
+  font-weight: bold;
 }
 
 .section {
-    padding: 3rem 1.5rem !important;
+  padding: 3rem 1.5rem !important;
 }
 
 nav {
-    padding: 0 1.5rem !important;
+  padding: 0 1.5rem !important;
 }
 
 .container.is-fluid {
-    max-width: 1350px !important;
+  max-width: 1350px !important;
 }
 
 .has-background-1 {
-    background-color: $background-color1;
+  background-color: $background-color1;
 }
 
 .has-background-2 {
-    background-color: $background-color2;
+  background-color: $background-color2;
 }
 
 .navbar.is-spaced {
-    padding-top: $navbar-padding-vertical;
-    padding-bottom: $navbar-padding-vertical;
-    padding-left: $navbar-padding-horizontal;
-    padding-right: $navbar-padding-horizontal;
+  padding-top: $navbar-padding-vertical;
+  padding-bottom: $navbar-padding-vertical;
+  padding-left: $navbar-padding-horizontal;
+  padding-right: $navbar-padding-horizontal;
 }
 
 .nav-anchor {
-    position: absolute;
-    top: calc(-1 * $navbar-height);
+  position: absolute;
+  top: calc(-1 * $navbar-height);
 }
 
 .nav-section {
-    position: relative;
+  position: relative;
+}
+
+.terminal-window {
+  background-color: #2D2E2C;
+  border-radius: 10px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  .terminal-window-header {
+    background: $tertiary;
+    height: 30px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .terminal-wrapper {
+    margin: 10px 20px;
+    border-radius: 4px;
+    background-color: #2D2E2C;
+    max-height: 400px;
+  }
 }
 
 @import "../../node_modules/bulma/bulma.sass";
