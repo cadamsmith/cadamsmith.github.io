@@ -14,6 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const navLinks = Array.from(document.getElementsByClassName('nav-link'));
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const navBurgerBtn = document.getElementById(link.dataset.target);
+      const navMenu = document.getElementById(navBurgerBtn.dataset.target);
+      if (!navBurgerBtn || !navMenu) {
+        return;
+      }
+
+      // close burger menu
+      navBurgerBtn.classList.remove('is-active');
+      navMenu.classList.remove('is-active');
+    });
+  });
+
   configureTerminal();
 });
 
@@ -79,8 +94,9 @@ function configureTerminal() {
   fitAddOn.fit();
 
   window.addEventListener('resize', function() {
-    console.log('resizing');
-    fitAddOn.fit();
+    setTimeout(function() {
+      fitAddOn.fit();
+    }, 20);
   });
   
   var isWebglEnabled = false;

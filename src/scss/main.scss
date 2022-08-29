@@ -27,7 +27,7 @@ nav.navbar {
 }
 
 .section {
-  padding: 3rem 1.5rem !important;
+  padding: 3rem 1rem !important;
 }
 
 nav {
@@ -69,6 +69,7 @@ nav {
 
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   .terminal-window-header {
     background: $tertiary;

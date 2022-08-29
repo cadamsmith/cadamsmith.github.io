@@ -8,7 +8,7 @@
         </div>
       </a>
   
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <a id="navBurgerBtn" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -17,21 +17,21 @@
   
     <div id="navMenu" class="navbar-menu is-boxed">
       <div class="navbar-end">
-        <a class="navbar-item" href="#about">
+        <a class="navbar-item nav-link" href="#about" data-target="navBurgerBtn">
           About
         </a>
   
-        <a class="navbar-item" href="#experience">
+        <a class="navbar-item nav-link" href="#experience" data-target="navBurgerBtn">
           Experience
         </a>
   
-        <a class="navbar-item" href="#projects">
+        <a class="navbar-item nav-link" href="#projects" data-target="navBurgerBtn">
           Projects
         </a>
   
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary" href="#contact">
+            <a class="button is-primary nav-link" href="#contact" data-target="navBurgerBtn">
               <strong>Contact</strong>
             </a>
           </div>
