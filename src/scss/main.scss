@@ -42,6 +42,22 @@ nav {
   background-color: $background-color2;
 }
 
+.has-background-accent-1 {
+  background-color: $accent1 !important;
+}
+
+.has-background-accent-2 {
+  background-color: $accent2 !important;
+}
+
+.has-background-accent-3 {
+  background-color: $accent3 !important;
+}
+
+.has-background-transparent {
+  background-color: transparent !important;
+}
+
 .navbar.is-spaced {
   padding-top: $navbar-padding-vertical;
   padding-bottom: $navbar-padding-vertical;
@@ -81,13 +97,43 @@ nav {
   }
 }
 
+.tab-box {
+  padding-top: 0.75rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 #auburnTabs {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+
+  .tab a {
+    background-color: transparent;
+    border-color: none;
+    color: white;
+  }
+
+  .tab.is-active a {
+    background-color: $accent2;
+    border-color: white;
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
 }
 
 #auburnTabContents {
-  height: 120px;
+  height: 132px;
   overflow-y: scroll;
+  background-color: $accent2;
+
+  padding-top: .5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: .75rem;
+
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .tab-content {
