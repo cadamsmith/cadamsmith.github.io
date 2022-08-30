@@ -123,8 +123,6 @@ nav {
 }
 
 #auburnTabContents {
-  height: 132px;
-  overflow-y: scroll;
   background-color: $accent2;
 
   padding-top: .5rem;
@@ -134,6 +132,13 @@ nav {
 
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+
+  height: 140px;
+}
+
+#coursesTaken {
+  overflow: scroll;
+  height: 120px;
 }
 
 .tab-content {
