@@ -146,7 +146,9 @@ function configureTerminal() {
       terminal.write('\r\n$ ');
     };
 
-    terminal.writeln('type `help` to see some options:');
+    terminal.writeln('┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻');
+    terminal.writeln('\nWelcome to my site!');
+    terminal.writeln('Enter `help` to see all terminal commands');
     prompt(terminal);
 
     terminal.onData(e => {
@@ -187,9 +189,9 @@ function configureTerminal() {
     help: {
       f: () => {
         terminal.writeln([
-          'Welcome to xterm.js! Try some of the commands below.',
           '',
-          ...Object.keys(commands).map(e => `  ${e.padEnd(10)} ${commands[e].description}`)
+          'Try some of the commands below:',
+          ...Object.keys(commands).map(e => ` - ${e.padEnd(10)} ${commands[e].description}`)
         ].join('\n\r'));
         prompt(terminal);
       },
@@ -202,39 +204,13 @@ function configureTerminal() {
       },
       description: 'Prints a fake directory structure'
     },
-    loadtest: {
+    clear: {
       f: () => {
-        let testData = [];
-        let byteCount = 0;
-        for (let i = 0; i < 50; i++) {
-          let count = 1 + Math.floor(Math.random() * 79);
-          byteCount += count + 2;
-          let data = new Uint8Array(count + 2);
-          data[0] = 0x0A; // \n
-          for (let i = 1; i < count + 1; i++) {
-            data[i] = 0x61 + Math.floor(Math.random() * (0x7A - 0x61));
-          }
-          // End each line with \r so the cursor remains constant, this is what ls/tree do and improves
-          // performance significantly due to the cursor DOM element not needing to change
-          data[data.length - 1] = 0x0D; // \r
-          testData.push(data);
-        }
-        let start = performance.now();
-        for (let i = 0; i < 1024; i++) {
-          for (const d of testData) {
-            terminal.write(d);
-          }
-        }
-        // Wait for all data to be parsed before evaluating time
-        terminal.write('', () => {
-          let time = Math.round(performance.now() - start);
-          let mbs = ((byteCount / 1024) * (1 / (time / 1000))).toFixed(2);
-          terminal.write(`\n\r\nWrote ${byteCount}kB in ${time}ms (${mbs}MB/s) using the ${isWebglEnabled ? 'webgl' : 'canvas'} renderer`);
-          terminal.prompt();
-        });
+        terminal.reset();
+        terminal.write('$ ');
       },
-      description: 'Simulate a lot of data coming from a process'
-    }
+      description: 'Clears the terminal screen'
+    },
   };
   
   function runCommand(term, text) {
