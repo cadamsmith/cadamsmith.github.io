@@ -74,6 +74,12 @@ nav {
   position: relative;
 }
 
+.hero-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .terminal-window {
   background-color: #2D2E2C;
   border-radius: 10px;
@@ -95,50 +101,6 @@ nav {
     background-color: #2D2E2C;
     max-height: 400px;
   }
-}
-
-.tab-box {
-  padding-top: 0.75rem !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-#auburnTabs {
-  margin-bottom: 0;
-
-  .tab a {
-    background-color: transparent;
-    border-color: none;
-    color: white;
-  }
-
-  .tab.is-active a {
-    background-color: $accent2;
-    border-color: white;
-    color: white;
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-  }
-}
-
-#auburnTabContents {
-  background-color: $accent2;
-
-  padding-top: .5rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-bottom: .75rem;
-
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-
-  height: 140px;
-}
-
-#coursesTaken {
-  overflow: scroll;
-  height: 120px;
 }
 
 .tab-content {
