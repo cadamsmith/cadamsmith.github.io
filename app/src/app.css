@@ -1,5 +1,5 @@
 html {
-    /* dark */
+	/* dark */
 	--brand-dark: var(--orange-3);
 	--text-1-dark: var(--gray-3);
 	--text-2-dark: var(--gray-5);
@@ -23,9 +23,9 @@ html {
 }
 
 :root {
-    color-scheme: dark;
+	color-scheme: dark;
 
-    --brand: var(--brand-dark);
+	--brand: var(--brand-dark);
 	--text-1: var(--text-1-dark);
 	--text-2: var(--text-2-dark);
 	--surface-1: var(--surface-1-dark);
@@ -37,7 +37,7 @@ html {
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
+	:root {
 		color-scheme: light;
 
 		--brand: var(--brand-light);
